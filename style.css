@@ -33,6 +33,23 @@ body {
   color: #fff !important;
 }
 
+/* botao de tema claro/escuro */
+.botao-tema {
+  background: transparent;
+  border: none;
+  color: #e5e5e5;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 12px;
+  transition: transform 0.3s;
+}
+
+.botao-tema:hover {
+  transform: scale(1.15);
+}
+
 /* fundo escuro no menu mobile quando abre */
 @media (max-width: 991px) {
   .navbar-collapse {
@@ -143,6 +160,23 @@ body {
   opacity: 1;
 }
 
+/* estatisticas (numeros animados) */
+.numero-stat {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  color: #8b5cf6;
+  letter-spacing: 2px;
+}
+
+.rotulo-stat {
+  display: block;
+  color: #777;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 /* tabela */
 #tabela-cidades table {
   background-color: #0f0f0f;
@@ -153,6 +187,24 @@ body {
   border-color: #1a1a1a !important;
   font-weight: 400;
   padding: 14px 16px;
+}
+
+/* cabecalhos clicaveis para ordenar a tabela */
+#tabela-cidades th.th-ordenavel {
+  cursor: pointer;
+  user-select: none;
+}
+
+#tabela-cidades th.th-ordenavel:hover {
+  color: #8b5cf6;
+}
+
+#tabela-cidades th.th-ordenavel.ordenado-asc::after {
+  content: ' ▲';
+}
+
+#tabela-cidades th.th-ordenavel.ordenado-desc::after {
+  content: ' ▼';
 }
 
 #tabela-cidades td {
@@ -182,6 +234,29 @@ body {
   border-bottom-color: #8b5cf6;
 }
 
+/* validacao do formulario */
+.campo-input.campo-erro {
+  border-bottom-color: #e63946;
+}
+
+.campo-input.campo-ok {
+  border-bottom-color: #2ecc71;
+}
+
+.msg-form {
+  font-size: 0.9rem;
+  margin: 8px 0 0;
+  min-height: 1.2em;
+}
+
+.msg-form.sucesso {
+  color: #2ecc71;
+}
+
+.msg-form.erro {
+  color: #e63946;
+}
+
 .botao-enviar {
   background-color: #1a1a1a;
   border: 1px solid #333;
@@ -203,6 +278,91 @@ body {
   color: #444;
   font-size: 0.85rem;
   margin-top: 40px;
+}
+
+/* tema claro */
+body.tema-claro {
+  background-color: #f4f4f4;
+  color: #1a1a1a;
+}
+
+body.tema-claro .barra-navegacao {
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid #ddd;
+}
+
+body.tema-claro .nav-link {
+  color: #555 !important;
+}
+
+body.tema-claro .nav-link:hover {
+  color: #000 !important;
+}
+
+body.tema-claro .botao-tema {
+  color: #1a1a1a;
+}
+
+@media (max-width: 991px) {
+  body.tema-claro .navbar-collapse {
+    background-color: #fafafa;
+    border-top: 1px solid #ddd;
+  }
+}
+
+body.tema-claro .categoria {
+  color: #999;
+}
+
+body.tema-claro .descricao-texto {
+  color: #555;
+}
+
+body.tema-claro .rotulo-stat {
+  color: #777;
+}
+
+body.tema-claro #tabela-cidades table {
+  --bs-table-bg: #ffffff;
+  --bs-table-color: #1a1a1a;
+  --bs-table-striped-bg: #f2f2f2;
+  --bs-table-hover-bg: #efefef;
+  --bs-table-hover-color: #1a1a1a;
+  --bs-table-border-color: #e0e0e0;
+}
+
+body.tema-claro #tabela-cidades th {
+  color: #888;
+  border-color: #e0e0e0 !important;
+}
+
+body.tema-claro #tabela-cidades td {
+  border-color: #e0e0e0 !important;
+}
+
+body.tema-claro .campo-input {
+  color: #1a1a1a;
+  border-bottom-color: #ccc;
+}
+
+body.tema-claro .campo-input::placeholder {
+  color: #999;
+}
+
+body.tema-claro .botao-enviar {
+  background-color: #eee;
+  border-color: #ccc;
+  color: #1a1a1a;
+}
+
+body.tema-claro .botao-enviar:hover {
+  background-color: #8b5cf6;
+  border-color: #8b5cf6;
+  color: #fff;
+}
+
+body.tema-claro .rodape {
+  color: #999;
 }
 
 /* responsivo celular */

@@ -22,6 +22,9 @@
 
     <a class="navbar-brand nome-site" href="#">SP</a>
 
+    <!-- botao de tema claro/escuro -->
+    <button id="botao-tema" class="botao-tema" type="button" aria-label="Alternar tema claro/escuro">🌙</button>
+
     <!-- botao hamburguer para celular -->
     <button class="navbar-toggler" type="button"
       data-bs-toggle="collapse"
@@ -116,17 +119,45 @@
       </div>
     </section>
 
+    <!-- secao de estatisticas (numeros animados) -->
+    <section id="estatisticas" class="mb-5 text-center">
+      <h2 class="titulo-secao mb-4">São Paulo em números</h2>
+      <div class="row g-4">
+
+        <div class="col-6 col-lg-3">
+          <div class="numero-stat" data-alvo="12300000">0</div>
+          <span class="rotulo-stat">Habitantes</span>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="numero-stat" data-alvo="96">0</div>
+          <span class="rotulo-stat">Distritos</span>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="numero-stat" data-alvo="32">0</div>
+          <span class="rotulo-stat">Subprefeituras</span>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="numero-stat" data-alvo="1521">0</div>
+          <span class="rotulo-stat">Km² de área</span>
+        </div>
+
+      </div>
+    </section>
+
     <!-- tabela comparativa -->
     <section id="tabela-cidades" class="mb-5">
       <div class="table-responsive rounded-4 overflow-hidden">
-        <table class="table table-dark table-hover mb-0">
+        <table class="table table-dark table-hover mb-0" id="tabela-comparativa">
           <thead>
             <tr>
-              <th>Cidade</th>
-              <th>Áreas verdes 🌳</th>
-              <th>Organização urbana</th>
-              <th>Poluição visual</th>
-              <th>Sensação estética</th>
+              <th class="th-ordenavel" data-tipo="texto">Cidade</th>
+              <th class="th-ordenavel" data-tipo="nivel">Áreas verdes 🌳</th>
+              <th class="th-ordenavel" data-tipo="nivel">Organização urbana</th>
+              <th class="th-ordenavel" data-tipo="nivel">Poluição visual</th>
+              <th class="th-ordenavel" data-tipo="texto">Sensação estética</th>
             </tr>
           </thead>
           <tbody>
@@ -169,11 +200,12 @@
 
         <h2 class="titulo-secao mb-4">Contato</h2>
 
-        <form class="d-flex flex-column gap-3">
-          <input type="text" class="campo-input" placeholder="Nome" required>
-          <input type="email" class="campo-input" placeholder="Email" required>
-          <input type="tel" class="campo-input" placeholder="Telefone" required>
+        <form id="form-contato" class="d-flex flex-column gap-3" novalidate>
+          <input type="text" id="nome" class="campo-input" placeholder="Nome" required>
+          <input type="email" id="email" class="campo-input" placeholder="Email" required>
+          <input type="tel" id="telefone" class="campo-input" placeholder="Telefone" required>
           <button type="submit" class="botao-enviar mt-2">Enviar</button>
+          <p id="msg-form" class="msg-form"></p>
         </form>
 
       </div>
@@ -188,6 +220,9 @@
 
 <!-- js do bootstrap (precisa pra funcionar o menu) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- nosso javascript -->
+<script src="script.js"></script>
 
 </body>
 </html>
