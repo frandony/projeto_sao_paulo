@@ -2,7 +2,8 @@
 
 Site de página única sobre a estética urbana de São Paulo, desenvolvido como projeto da disciplina (Etapas 1 e 2).
 
-🔗 **Acesse o site:** https://frandony.github.io/projeto_sao_paulo/
+🔗 **Acesse o site:** (https://projeto-sao-paulo-beryl.vercel.app/)
+
 
 ## Sobre o projeto
 
@@ -13,7 +14,7 @@ O site explora o caos urbano e a estética crua de São Paulo através de vídeo
 - HTML5
 - CSS3 (estilo próprio + [Bootstrap 5.3.3](https://getbootstrap.com/))
 - JavaScript (vanilla, sem bibliotecas)
-- [GitHub Pages](https://pages.github.com/) para publicação
+- [Vercel](https://vercel.com/)para publicação
 
 ## Funcionalidades
 
